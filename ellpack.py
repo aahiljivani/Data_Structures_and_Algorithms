@@ -25,6 +25,6 @@ class ELLMatrix:
         reconstructed_matrix = [[0 for _ in range(self.cols)] for _ in range(rows)]
         for row_idx, (row_positions, row_values) in enumerate(zip(self.positions, self.values)):
             for pos, val in zip(row_positions, row_values):
-                if pos != -1:  # Check if the position is valid
+                if pos != -1:
                     reconstructed_matrix[row_idx][pos] = val
         return reconstructed_matrix
